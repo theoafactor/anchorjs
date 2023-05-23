@@ -14,7 +14,24 @@
 
     <script>
 
-            customjs.createModal()
+           (async function(){
+            
+            const app = await CustomJS.createApp()
+
+
+            app.createModal()
+
+
+           }())
+
+
+        // CustomJS.createApp().then((app) => {
+        //         console.log(app)
+        //         app.createModal()
+
+        // })
+            
+           
 
     </script>
 </body>
