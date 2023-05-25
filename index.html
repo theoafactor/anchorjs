@@ -1,38 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-
-
-    <script src="./build/anchor.min.js"></script>
+  </head>
+  <body>
+    <script src="./build/beautify.min.js"></script>
 
     <script>
+      (async function () {
+        const app = await CustomJS.createApp();
 
-           (async function(){
-            
-            const app = await CustomJS.createApp()
-
-
-            app.createModal()
-
-
-           }())
-
-
-        // CustomJS.createApp().then((app) => {
-        //         console.log(app)
-        //         app.createModal()
-
-        // })
-            
-           
-
+        app.addModal({
+          title: "Welcome to my modal",
+          content: "This is a bootstrap modal content",
+          modal_name: "simple_modal",
+        });
+      })();
     </script>
-</body>
+  </body>
 </html>
